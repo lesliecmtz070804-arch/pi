@@ -1,0 +1,714 @@
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+@font-face {
+    font-family: 'Nobulina';
+    src: url('./nobulina/Nobulina Demo.ttf') format('truetype');
+}
+
+body{
+    border: 5px solid #ff6550;
+}
+
+
+/* =========================================================
+   NAVBAR PRINCIPAL
+========================================================= */
+
+#navbar{
+    padding: 10px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background-color: rgb(255, 36, 160);
+}
+
+#navbar a{
+    padding: 10px 20px;
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+#navbar a:hover{
+    transform: scale(1.1);
+}
+
+#navbar a:nth-child(1){
+    background-color: #ff6b6b;
+}
+
+#navbar a:nth-child(2){
+    background-color: #4ecdc4;
+}
+
+#navbar a:nth-child(3){
+    background-color: #1a535c;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+    position: fixed;
+
+    top: 10px;
+    left: 20px;
+
+    width: 50px;
+    height: auto;
+
+    z-index: 2000;
+}
+
+
+/* =========================================================
+   HERO / CARRUSEL
+========================================================= */
+
+.hero{
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.hero .carousel{
+    position: relative;
+
+    width: 100%;
+    height: 60vh;
+    max-height: 500px;
+
+    overflow: hidden;
+}
+
+.hero .carousel img{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
+}
+
+.hero .carousel img.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   NAVBAR SECUNDARIO
+========================================================= */
+
+#navbar2{
+    margin-top: 80px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#navbar2 a{
+    padding: 10px 20px;
+
+    text-decoration: none;
+    color: white;
+
+    border-radius: 10px;
+
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+#navbar2 a:hover{
+    transform: scale(1.1);
+}
+
+#navbar2 a:nth-child(1){
+    background-color: #F4B200;
+}
+
+#navbar2 a:nth-child(2){
+    background-color: #0066C7;
+}
+
+#navbar2 a:nth-child(3){
+    background-color: #E0388A;
+}
+
+#navbar2 a:nth-child(4){
+    background-color: #1193A2;
+}
+
+#navbar2 a:nth-child(5){
+    background-color: #79386E;
+}
+
+
+/* =========================================================
+   TITULOS GENERALES
+========================================================= */
+
+h1{
+    margin: 40px 0 20px;
+    text-align: center;
+    font-family: 'Nobulina';
+    font-size: 45px;
+    color: #000000;
+}
+
+h2{
+
+    font-family: 'Nobulina';
+    font-size: 45px;
+    margin-left: 60px;
+}
+#musica h2{
+    color: #F4B200;
+}
+#cultura h2{
+    color: #0066C7;
+}
+#arte h2{
+    color: #E0388A;
+}
+#cine h2{
+    color: #1193A2;
+}
+#social h2{
+    color: #79386E;
+}
+
+
+h3{
+    margin: 10px 0 5px;
+}
+
+p{
+    color: #555555;
+}
+
+
+/* =========================================================
+   TOP EVENTOS
+========================================================= */
+
+.galeria1{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+.galeria1 .card1{
+    text-align: center;
+}
+
+.galeria1 .card1 img{
+    width: 100%;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.galeria1 .card1 h3{
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   SECCION MUSICA
+========================================================= */
+
+#musica{
+    padding: 40px 20px;
+}
+
+#musica h2{
+    margin-bottom: 10px;
+}
+
+#musica p{
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GALERIA MUSICA
+========================================================= */
+
+#musica .galeria2{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+#musica .card2{
+    text-align: center;
+}
+
+#musica .card2 img{
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+#musica .card2 h3{
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   SECCION CULTURA
+========================================================= */
+
+#cultura{
+    padding: 40px 20px;
+}
+
+#cultura h2{
+    margin-bottom: 10px;
+}
+
+#cultura p{
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GALERIA CULTURA
+========================================================= */
+
+#cultura .galeria2{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+#cultura .card2{
+    text-align: center;
+}
+
+#cultura .card2 img{
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   SECCION ARTE
+========================================================= */
+
+#arte{
+    padding: 40px 20px;
+}
+
+#arte h2{
+    margin-bottom: 10px;
+}
+
+#arte p{
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GALERIA ARTE
+========================================================= */
+
+#arte .galeria2{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+#arte .card2{
+    text-align: center;
+}
+
+#arte .card2 img{
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   SECCION CINE
+========================================================= */
+
+#cine{
+    padding: 40px 20px;
+}
+
+#cine h2{
+    margin-bottom: 10px;
+}
+
+#cine p{
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GALERIA CINE
+========================================================= */
+
+#cine .galeria2{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+#cine .card2{
+    text-align: center;
+}
+
+#cine .card2 img{
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   SECCION SOCIAL
+========================================================= */
+
+#social{
+    padding: 40px 20px;
+}
+
+#social h2{
+    margin-bottom: 10px;
+}
+
+#social p{
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GALERIA SOCIAL
+========================================================= */
+
+#social .galeria2{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+#social .card2{
+    text-align: center;
+}
+
+#social .card2 img{
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   ELEMENTO STATIC
+========================================================= */
+
+.static{
+    width: 150px;
+    height: 90px;
+
+    position: static;
+
+    background-color: rgb(151, 96, 147);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MENU DESPLEGABLE
+========================================================= */
+
+.dropdown{
+    position: fixed;
+
+    top: 10px;
+    right: 10px;
+
+    z-index: 9999;
+
+    font-family: sans-serif;
+}
+
+.dropdown .dropbtn{
+    background-color: #1193A2;
+    color: white;
+
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: background 0.3s ease;
+}
+
+.dropdown .dropbtn:hover{
+    background-color: #08454c;
+}
+
+.dropdown .dropdown-content{
+    position: absolute;
+
+    right: 0;
+
+    margin-top: 8px;
+    min-width: 160px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+}
+
+.dropdown .dropdown-content a{
+    display: block;
+
+    padding: 12px;
+
+    color: black;
+
+    text-decoration: none;
+
+    transition: background 0.3s;
+}
+
+.dropdown .dropdown-content a:hover{
+    background-color: #f2f2f2;
+}
+
+.dropdown.active .dropdown-content{
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    width: 100px;
+    height: 100px;
+
+    margin: 10px;
+
+    background-color: rgb(7, 12, 76);
+}
+
+#final{
+    background-color: rgba(0, 0, 0, 0.272);
+}
+
+/* ===== PARTE 7: CONTACTO ===== */
+
+.contacto-fondo{
+    width: 100%;
+    background-color: #FCE9D6;
+    padding: 50px;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+
+
+.contacto-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+
+.contacto-info{
+    width: 60%;
+}
+
+.contacto-info .titulo-info{
+    font-family: 'Nobulina';
+    font-size: 40px;
+    color: #79386E;
+    margin-bottom: 20px;
+    line-height: 0.2;
+}
+
+
+.contacto-info p{
+    text-align: justify;
+    font-size: 25px;
+    line-height: 0.7;
+}
+
+.contacto{
+    width: 20%;
+}
+
+.contacto .contenido{
+    width: 100%;
+}
+
+.contacto .titulo {
+    font-family: 'Nobulina';
+    font-size: 40px;
+    color: #79386E;
+    border: none;
+}
+
+.contacto .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    text-align: justify;
+    font-size: 25px;
+    line-height: 0.7;
+}
+
+.contacto .item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.contacto-info .dato-contacto{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+.contacto-info .dato-contacto img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.contacto-info .dato-contacto p{
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px){
+
+    #navbar{
+        flex-direction: column;
+    }
+
+    #navbar2{
+        flex-wrap: wrap;
+    }
+
+    .galeria1{
+        grid-template-columns: 1fr;
+    }
+
+    #musica .galeria2,
+    #cultura .galeria2,
+    #arte .galeria2,
+    #cine .galeria2,
+    #social .galeria2{
+        grid-template-columns: 1fr;
+    }
+
+    .hero .carousel{
+        height: 40vh;
+    }
+
+}
